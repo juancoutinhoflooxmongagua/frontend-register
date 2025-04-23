@@ -1,13 +1,10 @@
 import React from "react";
 import Logo from "../template/Logo";
 import Footer from "../template/Footer";
-import Main from "../template/Main";
 import Header from "../template/Header";
-
-import { BrowserRouter } from "react-router-dom";
+import UserCrud from "../user/UserCrud";
 
 export default (props) => (
-  <BrowserRouter>
     <div className="container-fluid">
       <div className="row">
         <aside className="col-md-2 bg-light p-3">
@@ -15,7 +12,7 @@ export default (props) => (
         </aside>
         <main className="col-md-10">
           <Header />
-          <Main />
+          <UserCrud></UserCrud>
         </main>
       </div>
       <footer className="row">
@@ -24,5 +21,4 @@ export default (props) => (
         </div>
       </footer>
     </div>
-  </BrowserRouter>
 );

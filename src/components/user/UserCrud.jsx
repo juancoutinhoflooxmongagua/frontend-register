@@ -1,14 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Main from "../template/Main";
 
-const headerProps = {
-  icon: "users",
-  title: "Gestão de Usuários",
-  subtitle: "Gerencie usuários do sistema",
-};
-
-const baseUrl = "http://localhost:3001/users";
+const baseUrl = "http://localhost:3009/users";
 const initialState = {
   user: { name: "", email: "" },
   list: [],
@@ -134,10 +127,11 @@ export default class UserCrud extends Component {
 
   render() {
     return (
-      <Main {...headerProps}>
+      <div className="container mt-5">
+        <h2 className="text-white mb-4">Gestão de Usuários</h2>
         {this.renderForm()}
         {this.renderTable()}
-      </Main>
+      </div>
     );
   }
 }
